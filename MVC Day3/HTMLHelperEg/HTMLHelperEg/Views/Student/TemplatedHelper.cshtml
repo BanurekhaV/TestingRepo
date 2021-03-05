@@ -1,0 +1,30 @@
+﻿@model HTMLHelperEg.Models.Student
+@{
+    ViewBag.Title = "TemplatedHelper";
+}
+
+<h2>TemplatedHelper</h2>
+
+@using (Html.BeginForm())
+{
+    <table border="1" cellspacing="5" cellpadding="5">
+        <tr>
+            <td>@Html.DisplayName("RollNo")</td>
+            <td>@Html.Editor("rno")</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m=>m.RollNo)</td>
+            <td>@Html.EditorFor(m=>m.RollNo)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m=>m.Name)</td>
+            <td>@Html.TextBoxFor(m=>m.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m=>m.Gender)</td>
+                    </tr>
+        <tr>
+        <td><input type="submit" /></td>
+            </tr>
+    </table>
+}

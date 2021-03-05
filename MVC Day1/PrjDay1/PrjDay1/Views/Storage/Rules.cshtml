@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Rules";
+}
+
+<h2>Rules through View Bag</h2>
+@foreach (string s in ViewBag.ruledetails)
+{
+    <p>@s</p>
+}
+<br />
+<h2>Rules Through View Data</h2>
+@foreach(var r in ViewData["followrules"]as List<string>)
+{
+    <p>@r</p>
+}

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PrjDay2.Models.Ten_Most_Expensive_Products_Result>
+@{
+    ViewBag.Title = "ExpensiveProduct";
+}
+
+<h2>ExpensiveProduct</h2>
+
+@foreach(var product in Model)
+{
+    <li>@product.TenMostExpensiveProducts</li>
+    <li>@product.UnitPrice</li>
+}

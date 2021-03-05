@@ -1,0 +1,19 @@
+﻿@model IEnumerable<PrjDay2.Models.Order>
+@{
+    ViewBag.Title = "CustOrdersInfo";
+}
+
+<h2>CustOrdersInfo</h2>
+<h3> Showing details of Oders, Customer and Employee, Shipper</h3>
+@foreach(var item in Model)
+{
+    <ul typeof="none">
+        <li>OrderId: @item.OrderID</li>
+        <li>Customer Id: @item.CustomerID</li>
+        <li>Employee Id: @item.Employee.EmployeeID</li>
+        <li>Employee Name: @item.Employee.FirstName</li>
+        <li>Shipper Id: @item.ShipName</li>
+
+    </ul>
+}
+

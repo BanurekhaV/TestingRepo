@@ -1,0 +1,39 @@
+﻿@model dynamic
+    @*using PrjDay2.Models;*@
+@{
+    ViewBag.Title = "ExpandoEg";
+    var orders = Model.OrdersList;
+    var customers = Model.CustomerList;
+}
+
+<h2>ExpandoEg</h2>
+
+<table>
+    <tr>
+        <th>Order Id</th>
+        <th>Customer Id</th>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+    </tr>
+
+    @foreach (var o in orders)
+    {
+        <tr>
+            <td>@o.OrderID</td>
+            <td>@o.CustomerID</td>
+            <td>@o.Customer.CompanyName</td>
+            <td>@o.Customer.ContactName</td>
+        </tr>
+
+
+    }
+    @foreach (var ex1 in customers)
+    {
+        <tr>
+            <td>@ex1.CustomerID</td>
+            <td>@ex1.CompanyName</td>
+            <td>@ex1.ContactName</td>
+        </tr>
+    }
+</table>
+

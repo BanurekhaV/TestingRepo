@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PrjDay1.Models.Employee>
+@{
+    ViewBag.Title = "ListEmployees";
+}
+
+<h2>List of Employees</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
